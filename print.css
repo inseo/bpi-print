@@ -1,0 +1,157 @@
+/** Définition des styles d'impression
+ *  @lastmodified  2012-08-05
+ *
+ *  Version personnalisée de HTML5 Boilerplate
+ *  @see  https://github.com/h5bp/html5-boilerplate
+ */
+
+
+
+/** --- = @section STYLES GÉNÉRIQUES --- */
+
+/** Réinitialiser la couleur du texte pour accélérer l'impression.
+ *  @see  http://www.sanbeiji.com/archives/953
+ *  Supprimer les ombres portées et les couleurs d'arrière-plan. */
+* {
+	color: #000 !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
+	-ms-filter: none !important;
+			filter: none !important;
+	background-color: transparent !important;
+}
+
+
+/** Supprimer les éventuelles marges et largeur de <body>.
+ *  Initialiser la taille de police en point. */
+body {
+	margin: 0 !important;
+	padding: 0 !important;
+	width: auto !important;
+	font-size: 12pt;
+}
+
+
+/** Éviter que les titres ne soient suivis par un changement de page.
+ *  @note  Fonctionne uniquement sur Opera et IE 8+.
+ *  @see   http://en.wikipedia.org/wiki/Comparison_of_layout_engines_%28Cascading_Style_Sheets%29#cite_ref-75 */
+h1, h2, h3, h4, h5, h6 {
+	page-break-after: avoid;
+}
+
+
+/** Éviter que ces éléments ne soient scindés par un changement de page.
+ *  @note  Fonctionne uniquement sur Opera et IE 8+. */
+h1, h2, h3, h4, h5, h6,
+blockquote,
+code, pre,
+tr,
+img {
+	page-break-inside: avoid;
+}
+
+
+/** Spécifier le nombre minimal de lignes pouvant être isolés en bas ou en haut d'une page.
+ *  @note  Ne fonctionne pas sur Firefox. */
+p {
+	orphans: 3;   /** bas de page */
+	widows: 3;  /** haut de page */
+}
+
+
+/** Forcer la répétition des en-têtes de tableaux lorsqu'ils sont répartis sur plusieurs page. */
+thead {
+	display: table-header-group;
+}
+
+
+/** Souligner les liens. */
+a:link {
+	text-decoration: underline;
+}
+
+
+/** Afficher l'URL des liens. */
+a[href]:after {
+	content: " (" attr(href) ")";
+}
+
+
+/** Masquer l'URL des ancres nommées. */
+a[href^="#"]:after {
+	content: "";
+}
+
+
+/** Renseigner la signification des abbréviations. */
+abbr[title]:after {
+	content: " (" attr(title) ")";
+}
+
+
+/** Restreindre la largeur de l'image à celle de son contenur */
+img {
+	max-width: 100% !important;
+}
+
+
+
+
+/** --- = @section STYLES PARTICULIERS --- */
+
+/** Supprimer certains éléments inutiles sur la version papier. */
+/**
+#skip-nav, #search, #breadcrumb,
+#nav, #footer {
+	display: none;
+}
+*/
+
+
+/** Réinitialiser les marges et la largeur du conteneur principal. */
+/**
+#container {
+	margin: 0 !important;
+	padding: 0 !important;
+	width: auto !important;
+}
+*/
+
+
+/** Linéariser certains éléments de contenu. */
+/** 
+.classe-a-remplacer, #identifiant-a-remplacer {
+	float: none;
+}
+
+.classe-a-remplacer, #identifiant-a-remplacer {
+	position: static;
+}
+*/
+
+
+/** Remplacer un arrière-plan par une bordure. */
+/**
+.classe-a-remplacer, #identifiant-a-remplacer {
+	border: 1px solid MediumPurple;
+	color: MediumPurple;
+	background-color: transparent;
+}
+*/
+
+
+/** Remplacer une image par sa description détaillée. */
+/**
+.classe-a-remplacer img, 
+#identifiant-a-remplacer img {
+	display: none;
+}
+
+.classe-a-remplacer .visually-hidden,
+.classe-a-remplacer .visually-hidden caption,
+#identifiant-a-remplacer .visually-hidden,
+#identifiant-a-remplacer .visually-hidden caption {
+	position: static;
+	clip: auto;
+}
+*/
